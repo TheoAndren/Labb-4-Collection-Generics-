@@ -64,7 +64,7 @@ namespace Labb_4__Collection_Generics_
 
             foreach (Employee s1 in StakEmp)
             {
-                Console.WriteLine("Id = {0} , Name = {1}", s1.ID, s1.Name);
+                Console.WriteLine("Id {0} - Name {1} - Gender {2} - Salary {3}", s1.ID, s1.Name, s1.Gender, s1.Salary);
                 Console.WriteLine("The items in the stack = " + StakEmp.Count);
             }
             Console.WriteLine("----------------------------------");
@@ -73,38 +73,61 @@ namespace Labb_4__Collection_Generics_
             
             
             Employee employeefromstack1 = StakEmp.Pop();
-            Console.WriteLine("Id = {0} , Name = {1}", employeefromstack1.ID, employeefromstack1.Name);
+            Console.WriteLine("Id {0} - Name {1} - Gender {2} - Salary {3}", employeefromstack1.ID, employeefromstack1.Name, employeefromstack1.Gender, employeefromstack1.Salary);
             Console.WriteLine("The items in the stack = " + StakEmp.Count);
 
             Employee employeefromstack2 = StakEmp.Pop();
-            Console.WriteLine("Id = {0} , Name = {1}", employeefromstack2.ID, employeefromstack2.Name);
+            Console.WriteLine("Id {0} - Name {1} - Gender {2} - Salary {3}", employeefromstack2.ID, employeefromstack2.Name, employeefromstack2.Gender, employeefromstack2.Salary);
             Console.WriteLine("The items in the stack = " + StakEmp.Count);
 
             Employee employeefromstack3 = StakEmp.Pop();
-            Console.WriteLine("Id = {0} , Name = {1}", employeefromstack3.ID, employeefromstack3.Name);
+            Console.WriteLine("Id {0} - Name {1} - Gender {2} - Salary {3}", employeefromstack3.ID, employeefromstack3.Name, employeefromstack3.Gender, employeefromstack3.Salary);
             Console.WriteLine("The items in the stack = " + StakEmp.Count);
 
             Employee employeefromstack4 = StakEmp.Pop();
-            Console.WriteLine("Id = {0} , Name = {1}", employeefromstack4.ID, employeefromstack4.Name);
+            Console.WriteLine("Id {0} - Name {1} - Gender {2} - Salary {3}", employeefromstack4.ID, employeefromstack4.Name, employeefromstack4.Gender, employeefromstack4.Salary);
             Console.WriteLine("The items in the stack = " + StakEmp.Count);
 
             Employee employeefromstack5 = StakEmp.Pop();
-            Console.WriteLine("Id = {0} , Name = {1}", employeefromstack5.ID, employeefromstack5.Name);
+            Console.WriteLine("Id {0} - Name {1} - Gender {2} - Salary {3}", employeefromstack5.ID, employeefromstack5.Name, employeefromstack5.Gender, employeefromstack5.Salary);
             Console.WriteLine("The items in the stack = " + StakEmp.Count);
 
             Console.WriteLine("----------------------------------");
-            Console.WriteLine("");
 
+
+            StakEmp.Push(E1);
+            StakEmp.Push(E2);
+            StakEmp.Push(E3);
+            StakEmp.Push(E4);
+            StakEmp.Push(E5);
+
+            Console.WriteLine("Retrive Using Peek Method");
+            Console.WriteLine("");
             
+            Employee pS = StakEmp.Peek();
+            Console.WriteLine(pS.ID + " " + pS.Name);
+            Console.WriteLine("Toatal Items = " + StakEmp.Count);
+
+            Employee pE = StakEmp.Peek();
+            Console.WriteLine(pS.ID + " " + pS.Name);
+            Console.WriteLine("Toatal Items = " + StakEmp.Count);
+            Console.WriteLine("");
             
-            
-            
-            
-            
-            
-            
-            
-            
+            if (StakEmp.Contains(E3))
+            {
+                Console.WriteLine("Employee 3 are in the stack");
+            }
+            else
+            {
+                Console.WriteLine("Employee 3 are not in the stack");
+            }
+
+
+
+
+
+
+
             Console.ReadKey();
 
 
