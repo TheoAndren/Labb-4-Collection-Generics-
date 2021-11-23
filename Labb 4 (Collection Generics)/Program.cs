@@ -68,6 +68,7 @@ namespace Labb_4__Collection_Generics_
                 Console.WriteLine("The items in the stack = " + StakEmp.Count);
             }
             Console.WriteLine("----------------------------------");
+            Console.WriteLine("Retrive Using Pop Method");
             Console.WriteLine("");
 
             
@@ -109,7 +110,7 @@ namespace Labb_4__Collection_Generics_
             Console.WriteLine("Toatal Items = " + StakEmp.Count);
 
             Employee pE = StakEmp.Peek();
-            Console.WriteLine(pS.ID + " " + pS.Name);
+            Console.WriteLine(pE.ID + " " + pE.Name);
             Console.WriteLine("Toatal Items = " + StakEmp.Count);
             Console.WriteLine("");
             
@@ -124,8 +125,37 @@ namespace Labb_4__Collection_Generics_
 
 
 
+            List<Employee> listEmployees = new List<Employee>();
 
+            listEmployees.Add(E1);
+            listEmployees.Add(E2);
+            listEmployees.Add(E3);
+            listEmployees.Add(E4);
+            listEmployees.Add(E5);
 
+            if (listEmployees.Contains(E2))
+            {
+                Console.WriteLine("Employee 2 are in the list");
+            }
+            else
+            {
+                Console.WriteLine("Employee 2 are not in the list");
+            }
+            Console.WriteLine("");
+            Console.WriteLine("Find Method");
+            
+            Employee resultCont = listEmployees.Find(c => c.Gender == "Male");
+            Console.WriteLine("Name = {0}, Gender = {1}", resultCont.Name, resultCont.Gender);
+            Console.WriteLine("");
+           
+            Console.WriteLine("FindAll Method");
+            var newList = listEmployees.FindAll(s => s.Gender.Equals("Male"));
+            //Console.WriteLine("Name = {0}, Gender = {1}", resultCont.Name, resultCont.Gender);
+
+            foreach (Employee i in newList)
+            {
+                Console.WriteLine("Name = {0}, Gender = {1}", i.Name, i.Gender);
+            }
 
 
             Console.ReadKey();
